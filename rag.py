@@ -135,6 +135,10 @@ questions = [
 ]
 
 for q in questions:
-    print(f"Q: {q}")
-    print(f"A: {ask(q)}\n")
-    print("-" * 50 + "\n")
+    for q in questions:
+        print(f"\n{'='*60}")
+        print(f"Question: {q}")
+        print(f"{'='*60}")
+        answer = ask(q)
+        print(f"\nAnswer:\n{answer}")
+        print()
